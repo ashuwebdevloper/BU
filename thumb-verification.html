@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumb Verification | Bundelkhand University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="white-header">
+        <div class="university-header">
+            <div class="logo-container">
+                <img src="https://www.bujhansi.ac.in/images/logo2.png" alt="Bundelkhand University Logo" class="logo">
+                <div class="university-name">
+                    <h1>BUNDELKHAND UNIVERSITY</h1>
+                    <p>JHANSI, UTTAR PRADESH</p>
+                </div>
+            </div>
+            <div class="chancellor-info">
+                <p><strong>Smt. Anandiben Patel</strong><br>Humble Chancellor & H.E. Governor of U.P.</p>
+                <p><strong>Prof. Mukesh Pandey</strong><br>Vice Chancellor</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faculties.html">Faculties</a></li>
+                <li><a href="entry-system.html">Entry System</a></li>
+                <li><a href="thumb-verification.html" class="active">Thumb Verification</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thumb-verification-page">
+        <section class="verification-section">
+            <h1>Thumb Verification System</h1>
+            <p class="subtitle">For University Faculty, Staff, and Students</p>
+            
+            <div class="verification-container">
+                <div class="verification-instructions">
+                    <div class="entry-exit-toggle">
+                        <h3>Select Action:</h3>
+                        <div class="toggle-buttons">
+                            <button class="toggle-btn active" id="entryBtn">Entry</button>
+                            <button class="toggle-btn" id="exitBtn">Exit</button>
+                        </div>
+                    </div>
+                    
+                    <h2>Instructions:</h2>
+                    <ol>
+                        <li>Select Entry or Exit action above</li>
+                        <li>Place your thumb on the scanner</li>
+                        <li>Hold still for 3 seconds until verification completes</li>
+                        <li>Remove your thumb when prompted</li>
+                        <li>Your action will be automatically recorded</li>
+                    </ol>
+                    
+                    <div class="verification-status">
+                        <h3>Status: <span id="statusText">Ready to Scan</span></h3>
+                        <div class="status-indicator" id="statusIndicator"></div>
+                    </div>
+                    
+                    <div class="manual-fallback">
+                        <p>If thumb verification fails, use:</p>
+                        <a href="entry-system.html" class="manual-link">Manual Entry System</a>
+                    </div>
+                </div>
+                
+                <div class="scanner-area">
+                    <div class="scanner-placeholder" id="scannerPlaceholder">
+                        <i class="fas fa-fingerprint"></i>
+                        <p>Place your thumb here</p>
+                    </div>
+                    <canvas id="scannerCanvas" style="display:none;"></canvas>
+                    
+                    <div class="user-preview hidden" id="userPreview">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="user-details">
+                            <h3 id="userName">-</h3>
+                            <p><strong>ID:</strong> <span id="userId">-</span></p>
+                            <p><strong>Department:</strong> <span id="userDept">-</span></p>
+                            <p><strong>Last Entry:</strong> <span id="lastEntry">-</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="verification-result hidden" id="verificationResult">
+                <h2>Verification Result</h2>
+                <div class="result-content" id="resultContent"></div>
+                <button class="btn" id="newVerificationBtn">Start New Verification</button>
+            </div>
+        </section>
+        
+        <section class="recent-entries">
+            <h2>Today's Entry/Exit Records</h2>
+            <div class="entries-table-container">
+                <table id="entriesTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>ID</th>
+                            <th>Department</th>
+                            <th>Time</th>
+                            <th>Type</th>
+                            <th>Method</th>
+                        </tr>
+                    </thead>
+                    <tbody id="entriesTableBody">
+                        <!-- Entries will be added dynamically -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-actions">
+                <button class="btn secondary" id="refreshBtn">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+                <button class="btn secondary" id="exportBtn">
+                    <i class="fas fa-download"></i> Export Today's Data
+                </button>
+            </div>
+        </section>
+        
+        <section class="verification-faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3 class="faq-question">Who can use the thumb verification system?</h3>
+                <div class="faq-answer">
+                    <p>All registered university faculty, staff, and students can use this system. Visitors should use the manual entry system.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">What if my thumb isn't recognized?</h3>
+                <div class="faq-answer">
+                    <p>If your thumb isn't recognized after 3 attempts, please use the manual entry system or contact the university administration office to update your biometric records.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How is my entry/exit data used?</h3>
+                <div class="faq-answer">
+                    <p>Your entry/exit data is used for campus security and attendance purposes. A daily report is sent to the Dean's office for record-keeping.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Ph.D. Admission 2025-26</a></li>
+                    <li><a href="#">One Nation One Subscription</a></li>
+                    <li><a href="#">e-B.Ed. Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Activities</h3>
+                <ul>
+                    <li><a href="#">NSS</a></li>
+                    <li><a href="#">NCC</a></li>
+                    <li><a href="#">MASC</a></li>
+                    <li><a href="#">MERU</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Bundelkhand University, Jhansi</p>
+                <p>Uttar Pradesh - 284128</p>
+                <p>Phone: +91-1234567890</p>
+                <p>Email: info@bujhansi.ac.in</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bundelkhand University. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="thumb-verification.js"></script>
+</body>
+</html>

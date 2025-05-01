@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bundelkhand University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="white-header">
+        <div class="university-header">
+            <div class="logo-container">
+                <img src="https://www.bujhansi.ac.in/images/logo2.png" alt="Bundelkhand University Logo" class="logo">
+                <div class="university-name">
+                    <h1>BUNDELKHAND UNIVERSITY</h1>
+                    <p>JHANSI, UTTAR PRADESH</p>
+                </div>
+            </div>
+            <div class="chancellor-info">
+                <p><strong>Smt. Anandiben Patel</strong><br>Humble Chancellor & H.E. Governor of U.P.</p>
+                <p><strong>Prof. Mukesh Pandey</strong><br>Vice Chancellor</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faculties.html">Faculties</a></li>
+                <li><a href="thumb-verification.html">Thumb Verification</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="contact-hero">
+            <h1>Contact Bundelkhand University</h1>
+            <p>We're here to help and answer any questions you might have</p>
+        </section>
+
+        <section class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>Bundelkhand University<br>
+                    Kanpur Road, Jhansi<br>
+                    Uttar Pradesh - 284128</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone</h3>
+                    <p>+91-510-1234567 (Reception)<br>
+                    +91-510-1234568 (Administration)</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@bujhansi.ac.in<br>
+                    admission@bujhansi.ac.in<br>
+                    dean@bujhansi.ac.in</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Working Hours</h3>
+                    <p>Monday to Friday: 9:00 AM - 5:00 PM<br>
+                    Saturday: 9:00 AM - 1:00 PM<br>
+                    Sunday: Closed</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="admission">Admission Inquiry</option>
+                            <option value="academic">Academic Matters</option>
+                            <option value="administration">Administration</option>
+                            <option value="feedback">Feedback/Suggestions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>Find Us on Map</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.234567890123!2d78.12345678901234!3d25.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA3JzI0LjQiTiA3OMKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="emergency-contacts">
+            <h2>Emergency Contacts</h2>
+            <div class="emergency-cards">
+                <div class="emergency-card">
+                    <i class="fas fa-ambulance"></i>
+                    <h3>Medical Emergency</h3>
+                    <p>University Health Center: +91-510-1234569<br>
+                    Ambulance: 108</p>
+                </div>
+                
+                <div class="emergency-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Security</h3>
+                    <p>Campus Security: +91-510-1234570<br>
+                    Emergency: 100</p>
+                </div>
+                
+                <div class="emergency-card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Other Emergencies</h3>
+                    <p>Fire: 101<br>
+                    Women's Helpline: 1091</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Ph.D. Admission 2025-26</a></li>
+                    <li><a href="#">One Nation One Subscription</a></li>
+                    <li><a href="#">e-B.Ed. Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Activities</h3>
+                <ul>
+                    <li><a href="#">NSS</a></li>
+                    <li><a href="#">NCC</a></li>
+                    <li><a href="#">MASC</a></li>
+                    <li><a href="#">MERU</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Bundelkhand University, Jhansi</p>
+                <p>Uttar Pradesh - 284128</p>
+                <p>Phone: +91-1234567890</p>
+                <p>Email: info@bujhansi.ac.in</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bundelkhand University. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
